@@ -1,0 +1,17 @@
+version: '2'
+volumes:
+  ivideon-server:
+services:
+  ivideon-server:
+    image: ivideon
+    container_name: ivideon
+    volumes:
+      - '/etc/localtime:/etc/localtime:ro'
+      - 'ivideon-server:/root/.IvideonServer/'
+    ports:
+      - '6080:80'
+      - '8081:8080'
+      - '3101:3101'
+    network_mode: host
+    privileged: true
+    restart: always

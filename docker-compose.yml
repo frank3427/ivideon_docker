@@ -15,8 +15,6 @@ services:
     network_mode: host
     privileged: true
     restart: always
-    healthcheck:
-      disable: true
     deploy:
       resources:
         limits:

@@ -1,9 +1,9 @@
-version: '2'
+version: '3.6'
 volumes:
   ivideon-server:
 services:
   ivideon-server:
-    image: frank3427/ivideon_docker
+    image: frank3427/ivideon
     container_name: ivideon
     volumes:
       - '/etc/localtime:/etc/localtime:ro'

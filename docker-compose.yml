@@ -19,4 +19,7 @@ services:
       resources:
         limits:
           cpus: "0.20"
-          memory: "500M"      
+          memory: "512M"      
+        reservations:
+          cpus: "0.10"
+          memory: "256M"      

@@ -3,7 +3,7 @@ volumes:
   ivideon-server:
 services:
   ivideon-server:
-    image: ivideon
+    image: frank3427/ivideon_docker
     container_name: ivideon
     volumes:
       - '/etc/localtime:/etc/localtime:ro'
@@ -15,3 +15,5 @@ services:
     network_mode: host
     privileged: true
     restart: always
+    healthcheck:
+      disable: true

@@ -1,4 +1,4 @@
-version: '2.2'
+version: '3'
 volumes:
   ivideon-server:
 services:
@@ -15,6 +15,11 @@ services:
     network_mode: host
     privileged: true
     restart: always
-    cpus: "0.20"
-    mem_limit: "512M"      
-    mem_reservation: "256M"      
+    deploy:
+      resources:
+        limits:
+          cpus: "0.20"
+          memory: "512M"
+        reservations:
+          cpus: "0.10"
+          memory: "256M"

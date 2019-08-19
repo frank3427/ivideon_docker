@@ -16,6 +16,8 @@ command=/usr/bin/ivideon-server\n\
 user=%USER%\n\
 environment=DISPLAY=":1",HOME="%HOME%",USER="%USER%"\n\
 ' >> /etc/supervisor/conf.d/supervisord.conf
-
+COPY startup.sh /
+RUN chown root:root /startup.sh 
+RUN chmod +x /startup.sh
 EXPOSE 8080
 EXPOSE 3101
